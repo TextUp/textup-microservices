@@ -15,7 +15,7 @@ Simple tool for verifying [reCAPTCHA](https://developers.google.com/recaptcha) r
 To set up the environment:
 
 * `brew install yarn --without-node`
-* [Install nvm] https://github.com/creationix/nvm#installation
+* [Install nvm](https://github.com/creationix/nvm#installation)
 * `nvm use lts/carbon`
 * Optional: `nvm alias default lts/carbon`
 
@@ -33,3 +33,9 @@ To set up this project:
 ## Testing
 
 * `npm run test`
+
+## Deployment
+
+* For full deployments, required when resources have changed (i.e., anything in `serverless.yml`): `sls deploy --aws-profile <profile-name> --verbose`
+    * Note this will use the default `dev` stage.
+* When changing only the already-deployed lambda function code, you can deploy only the function: `serverless deploy function -f <function-name>`

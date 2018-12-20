@@ -25,7 +25,7 @@ custom:
     domain: services.textup.org
     certificate: ${ssm:TEXTUP_SSL_CERT_ARN}
     compress: true
-    cookies: none
-    headers: all
-    querystring: all
+    cookies: none # for caching
+    headers: none # for caching
+    querystring: all # for caching
     priceClass: PriceClass_100
