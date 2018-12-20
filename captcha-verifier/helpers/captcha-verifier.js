@@ -18,17 +18,17 @@ module.exports = class CaptchaVerifier {
         // Axios response object schema: https://github.com/axios/axios
         .then(({ status, data }) => {
           // calling static function within instance: https://stackoverflow.com/a/42463768
-          const statusCode = this.constructor.isSuccess(status, data.success) ? 200 : 400;
+          const statusCode = this.constructor.isSuccess(status, data && data.success) ? 200 : 400;
           resolve(AwsApiResponse.success(statusCode, data));
         })
         .catch(({ response, message }) => {
           const statusCode = response ? response.status : 500;
-          reject(AwsApiResponse.error(statusCode, message));
+          reject(AwsApiResponse.failure(statusCode, message));
         });
     });
   }
 
   static isSuccess(statusCode, isSuccess) {
-    return statusCode < 400 && isSuccess;
+    return statusCode < 400 && !!isSuccess;
   }
 };

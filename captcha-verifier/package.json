@@ -2,13 +2,19 @@
   "name": "captcha-verifier",
   "version": "1.0.0",
   "description": "reCAPTCHA verifying microservice",
-  "main": "functions.js",
+  "author": "Eric Bai (eric@ericbai.com)",
   "license": "Apache-2.0",
+  "scripts": {
+    "test": "tape tests/*"
+  },
   "dependencies": {
     "axios": "^0.18.0"
   },
   "devDependencies": {
+    "chance": "^1.0.18",
     "serverless-api-cloudfront": "^0.9.4",
-    "serverless-offline": "^3.31.3"
+    "serverless-offline": "^3.31.3",
+    "sinon": "^7.2.2",
+    "tape": "^4.9.1"
   }
 }

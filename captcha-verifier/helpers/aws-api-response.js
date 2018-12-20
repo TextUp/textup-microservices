@@ -4,7 +4,7 @@ module.exports = class AwsApiResponse {
   static success(statusCode, data) {
     return { statusCode, body: JSON.stringify(data) };
   }
-  static error(statusCode, ...messages) {
+  static failure(statusCode, ...messages) {
     return { statusCode, body: JSON.stringify({ messages }) };
   }
 };

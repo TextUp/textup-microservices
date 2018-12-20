@@ -1,6 +1,6 @@
 # TextUp Microservices
 
-Microservices implemented using [Serverless](https://serverless.com), frequently deployed to AWS Lambda
+Microservices implemented using [Serverless](https://serverless.com). Click into a specific microservice directory for additional instructions
 
 ## Tips
 
@@ -12,6 +12,7 @@ Microservices implemented using [Serverless](https://serverless.com), frequently
 * Currently, we use [IAM to manage externally-issued SSL certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html)
     * AWS ACM is the recommended certificate manager so IAM-managed certificates can only be accessed via the AWS CLI (no console access)
     * Note that all our IAM-managed certificates have paths prefixed with `/cloudfront` in order to be [usable with Cloudfront as required in the docs](https://aws.amazon.com/premiumsupport/knowledge-center/custom-ssl-certificate-cloudfront/)
+* [AWS Lambda execution context is reused for a period of time](https://docs.aws.amazon.com/lambda/latest/dg/running-lambda-code.html), so keep expensive initializations outside of the export body
 
 ## Helpful links
 
@@ -24,3 +25,4 @@ Microservices implemented using [Serverless](https://serverless.com), frequently
 * [Axios request library documentation](https://github.com/axios/axios)
 * [Intro to ES2015 classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 * [`serverless-api-cloudfront` documentation](https://github.com/Droplr/serverless-api-cloudfront)
+* [Serverless testing guide](https://serverless.com/framework/docs/providers/aws/guide/testing/)
