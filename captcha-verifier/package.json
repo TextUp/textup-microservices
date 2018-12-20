@@ -1,0 +1,14 @@
+{
+  "name": "captcha-verifier",
+  "version": "1.0.0",
+  "description": "reCAPTCHA verifying microservice",
+  "main": "functions.js",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "serverless-api-cloudfront": "^0.9.4",
+    "serverless-offline": "^3.31.3"
+  }
+}
