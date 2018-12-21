@@ -1,6 +1,8 @@
 # TextUp Microservices - Captcha Verifier
 
-Simple tool for verifying [reCAPTCHA](https://developers.google.com/recaptcha) responses
+Simple tool for verifying [reCAPTCHA](https://developers.google.com/recaptcha) responses.
+
+Currently this endpoint is accessible via `POST` request to `https://services.textup.org/human-verification` with a request body containing a `key` that is the reCAPTCHA response code to verify.
 
 ## Versions
 

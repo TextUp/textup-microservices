@@ -28,3 +28,4 @@ Microservices implemented using [Serverless](https://serverless.com). Click into
 * [`serverless-api-cloudfront` documentation](https://github.com/Droplr/serverless-api-cloudfront)
 * [Serverless testing guide](https://serverless.com/framework/docs/providers/aws/guide/testing/)
 * [Serverless AWS Lambda CLI reference](https://serverless.com/framework/docs/providers/aws/cli-reference/)
+* [Serverless guide to handling CORS](https://serverless.com/blog/cors-api-gateway-survival-guide/)
